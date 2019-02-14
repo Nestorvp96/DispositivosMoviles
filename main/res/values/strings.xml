@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Tarea01</string>
+    <string name="icn_menu">Save</string>
+    <string name="nombre_hint">Ingrese su nombre</string>
+    <string name="telefono_hint">Ingrese su telefono</string>
+    <string name="spinner_title">Escolaridad</string>
+    <string-array name="escolaridad_array">
+        <item>Bachillerato</item>
+        <item>Tecnico</item>
+        <item>Licenciatura</item>
+        <item>Maestria</item>
+        <item>Doctorado</item>
+    </string-array>
+
+    <string name="radiobtn_title">Genero</string>
+    <string name="rd_femenino">Femenino</string>
+    <string name="rd_masculino">Masculino</string>
+    <string name="input_title">Libro favorito</string>
+    <string-array name="libros_array">
+
+        <item>Harry Potter</item>
+        <item>Game of Thrones</item>
+        <item>El Psicoanalista</item>
+        <item>El Loco</item>
+        <item>La Sombra</item>
+
+    </string-array>
+
+    <string name="check_title">Practica Deporte</string>
+    <string name="btn_limpiar">LIMPIAR</string>
+
+    <string name="toast_title">Desea limpiar contenido?</string>
+</resources>

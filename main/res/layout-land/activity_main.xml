@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    >
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nombre_hint" />
+
+            <EditText
+                android:id="@+id/et_telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_nombre"
+                android:layout_marginTop="@dimen/margin_top"
+                android:hint="@string/telefono_hint"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tv_escolaridad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_telefono"
+                android:layout_marginTop="@dimen/margin_top"
+                android:text="@string/spinner_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <Spinner
+                android:id="@+id/spinnerESC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_escolaridad">
+
+            </Spinner>
+
+            <TextView
+                android:id="@+id/tv_genero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerESC"
+                android:layout_marginTop="@dimen/margin_top"
+                android:text="@string/radiobtn_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <RadioGroup
+                android:id="@+id/rdgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_genero"
+                android:orientation="horizontal"
+
+                >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rd_femenino"
+
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_rdbtn"
+                    android:text="@string/rd_masculino" />
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_Libro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rdgroup"
+                android:layout_marginTop="@dimen/margin_top"
+                android:text="@string/input_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_libro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_Libro" />
+
+
+            <CheckBox
+                android:id="@+id/chbx_deporte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_libro"
+                android:layout_marginTop="@dimen/margin_top"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/check_title" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+            <LinearLayout
+                android:layout_below="@id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_limpiar"
+
+                    android:onClick="btnlimpiarclicked"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

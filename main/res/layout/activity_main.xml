@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    >
+    
+    
+    <EditText
+        android:id="@+id/et_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre_hint"/>
+
+    <EditText
+        android:id="@+id/et_telefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/telefono_hint"
+        android:inputType="number"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_below="@id/et_nombre"
+        />
+    <TextView
+        android:id="@+id/tv_escolaridad"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/spinner_title"
+        android:layout_below="@id/et_telefono"
+        android:textSize="@dimen/text_size"
+        android:layout_marginTop="@dimen/margin_top"
+        />
+    <Spinner
+        android:id="@+id/spinnerESC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_escolaridad"
+        >
+
+    </Spinner>
+
+    <TextView
+        android:id="@+id/tv_genero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerESC"
+        android:text="@string/radiobtn_title"
+        android:textSize="@dimen/text_size"
+        android:layout_marginTop="@dimen/margin_top"
+        android:textColor="@color/black"
+        />
+
+    <RadioGroup
+        android:id="@+id/rdgroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_genero"
+        android:orientation="horizontal"
+
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rd_femenino"
+
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rd_masculino"
+            android:layout_marginLeft="@dimen/margin_rdbtn"
+            />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_Libro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input_title"
+        android:textSize="@dimen/text_size"
+        android:layout_below="@id/rdgroup"
+        android:layout_marginTop="@dimen/margin_top"
+        android:textColor="@color/black"
+        />
+    <AutoCompleteTextView
+        android:id="@+id/et_libro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_Libro"
+        />
+
+
+
+    <CheckBox
+        android:id="@+id/chbx_deporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_title"
+        android:layout_below="@id/et_libro"
+        android:layout_marginTop="@dimen/margin_top"
+        android:checked="false"
+        android:onClick="onCheckboxClicked"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_limpiar"
+            android:layout_below="@id/chbx_deporte"
+            android:onClick="btnlimpiarclicked"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
